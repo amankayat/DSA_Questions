@@ -14,6 +14,7 @@ But you have to follow the rules.
 
 `3. file name should be the problem name.`
 
+🔴 If you will follow these rules carefully, i will definitely merge your PR in this repo.
 ## Topics
 
  - Array
