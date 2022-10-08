@@ -14,6 +14,10 @@ But you have to follow the rules.
 
 `3. file name should be the problem name.`
 
+`4. You have to upload minimum two files.`
+
+🔴 If you will follow these rules carefully ,i will definitely merge your PR in this repo.
+
 ## Topics
 
  - Array
