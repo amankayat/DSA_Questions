@@ -1,0 +1,76 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define N 4
+
+void display(int board[N][N])
+{
+	for(int i=0;i<N;i++)
+	{
+		for(int j=0;j<N;j++)
+			cout<<board[i][j]<<" ";
+
+		cout<<endl;
+	}
+	cout<<endl;
+}
+
+bool isSafe(int row,int col,int board[N][N])
+{
+	int i,j;
+	int x=row;
+	int y=col;
+
+	while(y>=0)
+	{
+		if(board[x][y]==1)
+			return false;
+
+		y--;
+	}
+
+		for (i = row, j = col; i >= 0 && j >= 0; i--, j--)
+        if (board[i][j])
+            return false;
+  
+
+	    for (i = row, j = col; j >= 0 && i < N; i++, j--)
+        if (board[i][j])
+            return false;
+  
+	   return true;
+}
+
+void solve(int col,int board[N][N])
+{
+	//cout<<"hello"<<endl;
+	if(col>=N)
+	{
+		display(board);
+		return;
+	}
+
+	for(int row=0;row<N;row++)
+	{
+		//cout<<row+1<<" "<<col<<endl;
+		if(isSafe(row,col,board))
+		{
+			//cout<<"hello"<<endl;
+			board[row][col]=1;
+			solve(col+1,board);
+			board[row][col]=0;
+		}
+
+	}
+}
+
+
+int main()
+{
+	int board[N][N] = { { 0, 0, 0, 0 },
+                        { 0, 0, 0, 0 },
+                        { 0, 0, 0, 0 },
+                        { 0, 0, 0, 0 } };
+	solve(0,board);
+
+}
