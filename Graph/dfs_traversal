@@ -1,0 +1,11 @@
+//DFS Traversal of graph 
+void dfs(int node,vector<int>&isVisited,vector<int>&res,vector<int> adj[]){
+        res.push_back(node);
+        isVisited[node]=1;
+        // vector<int>vt=adj[node];
+        for(auto it : adj[node]){
+            if(!isVisited[it]){
+                dfs(it,isVisited,res,adj);
+            }
+        }
+    }
