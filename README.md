@@ -8,15 +8,15 @@ But you have to follow the rules.
 ## Rules
 
 
-`1. Add your name and profile link in CONTRIBUTING.md file.`
+`1. Add your name and profile link in CONTRIBUTER.md file.`
 
 `2. Choose any topic(list is given below) and add Question to this Folder.`
 
 `3. file name should be the problem name.`
 
-`4.You have to upload minimum 2 files.`
+`4. You have to upload minimum two files.`
 
-🔴 If you will follow these rules carefully , i will definitely merge your PR in this repo.
+🔴 If you will follow these rules carefully ,i will definitely merge your PR in this repo.
 
 ## Topics
 
