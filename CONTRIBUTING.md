@@ -8,6 +8,7 @@
 - [Anmol Saxena](https://github.com/anmol-1905)
 - [Shreyansh Shukla](https://github.com/shreyansh-35)
 - [Anmol Shrama](https://github.com/Anmol1709)
+- [Surendra Yadav](https://github.com/skyadav029)
 - [Chirag Lakra](https://github.com/chiraglakra)
 
 
