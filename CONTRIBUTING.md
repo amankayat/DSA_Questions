@@ -10,7 +10,7 @@
 - [Anmol Shrama](https://github.com/Anmol1709)
 - [Surendra Yadav](https://github.com/skyadav029)
 - [Chirag Lakra](https://github.com/chiraglakra)
-
+- [Sankooru Manideep](https://github.com/sankooru14)
 
 
 
