@@ -16,7 +16,7 @@ But you have to follow the rules.
 
 `4. You have to upload minimum two files.`
 
-🔴 If you will follow these rules carefully ,i will definitely merge your PR in this repo.
+🔴 If you will follow these rules carefully ,i will definitely merge your PR in this repository.
 
 ## Topics
 
