@@ -1,0 +1,88 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int mod = 998244353;
+int gcd(int a, int b) {return b ? gcd(b, a % b) : a;}
+int lcm(int a, int b) {return a * b / gcd(a, b); }
+long long power(int N,int R)
+    {
+        long M = 1000000007;
+        if(R == 0) return 1;
+        long temp = power(N, R /2) % M;
+        long ans = (temp * temp) % M;
+        if(R % 2 == 1){
+            ans = (ans * N) % M;
+        }
+        return ans;
+    }
+int bpow(int a,int b) 
+{
+  int res = 1;
+  while (b > 0) {
+    if (b & 1)res = ((res) * (a));
+      a = ((a) * (a));
+      b >>= 1;
+  }
+  return res;
+}
+/////////////////// Let's begin from here ///////////////////////
+long long int count(int coins[], int n, int sum) {
+
+        // code here.
+        /*if(sum==0)
+            return 1;
+        if(n==0)
+            return 0;
+        int res = count(coins,n-1,sum);
+        if(coins[n-1]<=sum)
+            res = res + count(coins,n,sum-coins[n-1]);
+        return res;*/
+        
+        long long dp[sum+1][n+1];
+        for (int i=0; i<=n; i++)
+        {
+            dp[0][i] = 1;
+        }
+        for (int i=1; i<=sum; i++)
+        {
+            dp[i][0] = 0;
+        }
+        
+        for (int i=1; i<=sum; i++)
+        {
+            for (int j=1; j<=n; j++)
+            {
+               dp[i][j] = dp[i][j-1];
+             //   cout<<dp[i][j]<<" ";
+                if(coins[j-1]<=i)
+                    dp[i][j] += dp[i-coins[j-1]][j];
+                    cout<<dp[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+        return dp[sum][n];
+}
+
+
+void solve()
+{
+	int n; cin>>n;
+	int a[n];
+	for (int i=0; i<n; i++)
+	{
+		cin>>a[i];
+	}
+	int sum; cin>>sum;
+	cout<<count(a,n,sum);
+}
+//////////////////////////////////// main program/////////////////////
+signed main()
+{
+	ios_base::sync_with_stdio(0);
+    cin.tie(0);  cout.tie(0);
+    int t; cin>>t;
+   while(t--)
+    {
+       	solve();
+	}   
+}
