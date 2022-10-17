@@ -1,0 +1,24 @@
+
+
+int lengthOfLongestSubstring(string s) {
+        
+        int ans=0;
+        vector<char> present;
+        for (int i=0; i<s.size(); i++)
+        {
+            auto it = find(present.begin(),present.end(),s[i]);
+            if (it != present.end())
+            {
+                if (present.size()>ans)
+                    ans = present.size();
+                present.erase(present.begin(),it+1);
+            }
+            present.push_back(s[i]);
+            
+        }
+        if (present.size()>ans)
+                    ans = present.size();
+        return ans;
+        
+        
+    }
