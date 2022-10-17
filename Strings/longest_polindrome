@@ -1,0 +1,36 @@
+string longestPalindrome(string s) {
+        int n = s.size();
+   vector<vector<int>> table(n,vector<int> (n,0));
+   int maxlen = 1;
+   for (int i=0; i<n; i++)
+   	table[i][i]=1;
+   	int start = 0;
+   	for (int i=0; i<n-1; i++)
+   	{
+   		if (s[i]==s[i+1])
+   		{
+   			table[i][i+1] = 1;
+   			start = i;
+   			maxlen = 2;
+		   }
+	   }
+	   for (int k=2; k<n; k++)
+	   {
+	   	for (int i=0; i<n-k; i++)
+	   	{
+	   	int j = k+i;
+	   	if (table[i+1][j-1] && s[i]==s[j])
+	   	{
+
+	   	table[i][j]=1;
+	   	if (k+1>maxlen)
+	   	{
+	   		start=i;
+	   		maxlen = k+1;
+		   }
+	   }
+}
+}
+	   return s.substr(start,maxlen);
+
+    }
