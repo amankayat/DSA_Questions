@@ -15,5 +15,6 @@
 - [Hitesh Ahuja](https://github.com/hitesh1199)
 - [Saurav Kumar](https://github.com/saurav1207)
 - [Suyash Awasthi](https://github.com/suyash0508)
+- [Smrity Verma](https://github.com/Smrity)
 
 
