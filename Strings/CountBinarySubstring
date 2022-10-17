@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int countBinarySubstrings(string s) {
+        
+        int cnt0 = 0;
+        int cnt1 = 1;
+        int ans = 0;
+        for(int i = 1; i < s.size(); i++)
+        {
+            
+            if(s[i] != s[i-1])
+            {
+                ans += min(cnt0,cnt1);
+                cnt0 = cnt1;
+                cnt1 = 1;
+            }
+            
+            else 
+                cnt1++;
+        }
+        
+        ans += min(cnt1,cnt0);
+        
+        return ans;
+    }
+};
