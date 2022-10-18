@@ -17,7 +17,7 @@ class alloted_frames {
                 a[i]=sc.nextInt();
             }
             int m=sc.nextInt();
-            Solution ob = new Solution();
+            Solution2 ob = new Solution2();
             System.out.println(ob.findPages(a,n,m));
         }
     }
@@ -27,7 +27,7 @@ class alloted_frames {
 
 //User function Template for Java
 
-class Solution
+class Solution2
 {
     //Function to find minimum number of pages.
     public static int findPages(int[]A,int N,int M)
