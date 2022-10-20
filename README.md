@@ -8,7 +8,7 @@ But you have to follow the rules.
 ## Rules
 
 
-`1. Add your name and profile link in CONTRIBUTER.md file.`
+`1. Add your name and profile link in CONTRIBUTING.md file.`
 
 `2. Choose any topic(list is given below) and add Question to this Folder.`
 
